@@ -100,7 +100,7 @@ const App = defineComponent({
       inputValue: '',
       todos: todoData,
       show: 'all',
-    } as Data;
+    };
   },
 
   methods: {
@@ -134,9 +134,7 @@ const App = defineComponent({
   },
 
   computed: {
-    filteredTodos() {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-      // @ts-ignore
+    filteredTodos(): Todo[] {
       return this.todos.filter((todo: Todo) => {
         switch (this.show) {
           case 'unfinished':
