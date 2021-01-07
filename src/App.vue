@@ -6,12 +6,12 @@
           <div class="wrapper">
             <div v-if="show === 'all'">
               <Button
-                @onClick="show = 'unfinished'"
+                @click="show = 'unfinished'"
                 label="Unfinished tasks"
                 :active="show === 'unfinished' && true"
               />
               <Button
-                @onClick="show = 'finished'"
+                @click="show = 'finished'"
                 label="Finished tasks"
                 :active="show === 'finished' && true"
               />
@@ -19,16 +19,16 @@
 
             <div v-else>
               <Button
-                @onClick="show = 'unfinished'"
+                @click="show = 'unfinished'"
                 label="Unfinished tasks"
                 :active="show === 'unfinished' && true"
               />
               <Button
-                @onClick="show = 'finished'"
+                @click="show = 'finished'"
                 label="Finished tasks"
                 :active="show === 'finished' && true"
               />
-              <Button @onClick="show = 'all'" label="All tasks" :active="show === 'all' && true" />
+              <Button @click="show = 'all'" label="All tasks" :active="show === 'all' && true" />
             </div>
 
             <form
@@ -71,8 +71,6 @@
 <script lang="ts">
 /* eslint-disable no-param-reassign */
 import { defineComponent } from 'vue';
-// import { v4 as uuidv4 } from 'uuid';
-// import { UUID, uuid } from 'vue-uuid';
 import Todo from './components/Todo/Todo.vue';
 import Button from './components/Button/Button.vue';
 import todoData from './data/data';
@@ -95,7 +93,7 @@ const App = defineComponent({
     Button,
   },
 
-  data() {
+  data(): Data {
     return {
       inputValue: '',
       todos: todoData,

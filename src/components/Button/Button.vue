@@ -2,7 +2,6 @@
   <button
     class="button"
     :class="{ active: active, fill: type === 'fill' }"
-    @click="$emit('onClick')"
   >
     {{ label }}
   </button>
