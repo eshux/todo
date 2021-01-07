@@ -11,7 +11,7 @@ const todoData = [
   },
   {
     id: '2',
-    value: 'Buy bananas',
+    value: 'Buy apples',
     isDone: false,
   },
 ];
